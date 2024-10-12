@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const entries = () => {
+export const Entries = () => {
   return (
     <div>entries</div>
   )
