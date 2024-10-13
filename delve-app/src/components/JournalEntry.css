@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400&display=swap');
+
 /* Main journal container */
 .journal-container {
+    position: relative; /* Ensure positioning is relative to the parent */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Keep the entire content centered */
+    align-items: center;
     padding: 20px;
     height: 100vh;
     box-sizing: border-box;
@@ -22,16 +25,17 @@
     font-size: 40px;
     margin: 10px 0;
     color: #3a2f2f;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lexend', sans-serif; /* Optional: Ensure your font is applied */
     text-align: left; /* Align title text to the left within the container */
+    font-weight: 400;
 }
 
 /* Date styling */
 .journal-date {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #666;
     text-align: left; /* Align date text to the left within the container */
+    color: #3a2f2f;
 }
 
 /* Notepad container */
@@ -93,4 +97,18 @@
 .delve-button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;  /* Adjust spacing from the top */
+    left: 20px; /* Adjust spacing from the left */
+    width: 50px;  /* Adjust size of the back button */
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
