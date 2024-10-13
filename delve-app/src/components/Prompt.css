@@ -5,7 +5,7 @@
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    width: 98%;
+    width: 98.7%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
   }
@@ -29,7 +29,7 @@
   /* Prompt question text */
   .prompt-question {
     flex-grow: 1;
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
   }
   
@@ -68,5 +68,38 @@
     align-items: flex-start;
     overflow: visible;
     margin-top: 20px; /* Add spacing between the date and notepad */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
+
+.sub-delve-button {
+    width: 40px;      /* Set the width of the button */
+    height: 40px;     /* Set the height of the button (same as width to make it round) */
+    border-radius: 50%;  /* Makes the button round */
+    border: none;     /* Remove the default border */
+    background-image: url('/public/delve_logo.jpeg');  /* Set the image as the button */
+    background-size: cover;  /* Ensure the image covers the entire button */
+    background-position: center;  /* Center the image inside the button */
+    cursor: pointer;  /* Change cursor to pointer on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow for effect */
+    outline: none;    /* Remove the outline */
+}
+
+.sub-delve-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.sub-loading-button {
+    width: 40px;      /* Set the width of the button */
+    height: 40px;     /* Set the height of the button (same as width to make it round) */
+    border-radius: 50%;  /* Makes the button round */
+    border: none;     /* Remove the default border */
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */     /* Remove the default border */
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+ }

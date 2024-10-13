@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './JournalCard.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,7 +6,8 @@ export const JournalCard = ({ month, date, event }) => {
     const navigate = useNavigate(); // Initialize the navigate function
 
     const handleClick = () => {
-        navigate(`/journal/${event}`); // Navigate to the corresponding journal entry page
+        //setData(event)
+        navigate(`/journal`); // Navigate to the corresponding journal entry page
     };
 
     return (

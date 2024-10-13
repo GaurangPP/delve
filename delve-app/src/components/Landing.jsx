@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Landing.css';
 import { JournalCard } from './JournalCard';
 
-const initialEvents = [];
+const initialEvents = [
+    {month: 'October', date: '13', event: '1'}
+];
 
-export const Landing = () => {
+export const Landing = ({data, setData}) => {
     const [input, setInput] = useState('');
     const [events, setEvents] = useState(initialEvents);
     const [filteredEvents, setFilteredEvents] = useState(initialEvents);
@@ -34,12 +36,29 @@ export const Landing = () => {
             event: newEventTitle,
         };
 
-        const updatedEvents = [newEvent, ...events];
+        const updatedEvents = [newEvent, ...(events || [])];
+        console.log(updatedEvents)
+        setData(updatedEvents);
         setEvents(updatedEvents);
         setFilteredEvents(updatedEvents);
         setNewEventTitle('');
         closeModal();
+        
     };
+
+    useEffect(() => {
+        console.log(data); // This will run every time `data` is updated
+        setEvents(data);
+        setFilteredEvents(data);
+      }, [data]);
+
+      /*
+      useEffect(() => {
+        setEvents(data);
+        setFilteredEvents(data);
+      }, []);
+      */
+
 
     return (
         <div className='landing-container'>
@@ -61,12 +80,13 @@ export const Landing = () => {
             </header>
 
             <div className='journal-list'>
-                {filteredEvents.map((event, index) => (
+                {Array.isArray(filteredEvents) && filteredEvents.map((event, index) => (
                     <JournalCard
                         key={index}
                         month={event.month}
                         date={event.date}
                         event={event.event}
+                        setData={setData}
                     />
                 ))}
             </div>

@@ -99,6 +99,24 @@
     transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
+.loading-button {
+    position: fixed;  /* Keeps the button fixed in the bottom-right corner */
+    bottom: 20px;
+    right: 20px;
+    width: 80px;      /* Set the width of the button */
+    height: 80px;     /* Set the height of the button (same as width to make it round) */
+    border-radius: 50%;  /* Makes the button round */
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */     /* Remove the default border */
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+ }
+
+
 .back-button {
     position: absolute;
     top: 20px;  /* Adjust spacing from the top */
