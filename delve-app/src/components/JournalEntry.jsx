@@ -12,7 +12,8 @@ export const JournalEntry = () => {
   // Adjust the height of the textarea dynamically based on the content
   useEffect(() => {
     if (textareaRef.current) {
-      textareaRef.current.style.height = 'auto'; // Reset height to auto to shrink if necessary
+      textareaRef.current.style.height = '400px'; // Reset height to auto to shrink if necessary
+      //Switch above to auto otherwise
       textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`; // Set height to fit content
     }
   }, [text]);

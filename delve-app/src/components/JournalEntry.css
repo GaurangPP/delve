@@ -37,19 +37,18 @@ html, body {
     width: 80%; 
     background-color: white;
     border-radius: 15px;
-    padding: 0;
+    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    max-height: 70vh;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* Notepad textarea */
 .notepad-textarea {
     width: 100%;
-    height: 50vh; /* Set initial height to 50% of the viewport */
+    min-height: 50vh; /* Set initial height to 50% of the viewport */
     border: none;
     outline: none;
     padding: 0 20px;
