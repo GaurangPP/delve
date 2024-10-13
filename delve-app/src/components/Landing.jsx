@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 import './Landing.css';
 import { JournalCard } from './JournalCard';
 
-const initialEvents = [
-    { month: 'October', date: '12', event: 'DubHacks!' },
-    { month: 'October', date: '13', event: 'Calculus Test' },
-    { month: 'October', date: '14', event: 'My Birthday' },
-    { month: 'October', date: '15', event: 'Tennis Game' },
-    { month: 'October', date: '16', event: 'Hawaii Trip' },
-];
-
+const initialEvents = [];
 
 export const Landing = () => {
     const [input, setInput] = useState('');
@@ -32,7 +25,7 @@ export const Landing = () => {
     const closeModal = () => setShowModal(false);
 
     const createNewEntry = () => {
-        if (newEventTitle.trim() === '') return; // Avoid empty titles
+        if (newEventTitle.trim() === '') return;
 
         const today = new Date();
         const newEvent = {
@@ -41,11 +34,11 @@ export const Landing = () => {
             event: newEventTitle,
         };
 
-        const updatedEvents = [...events, newEvent];
+        const updatedEvents = [newEvent, ...events];
         setEvents(updatedEvents);
         setFilteredEvents(updatedEvents);
-        setNewEventTitle(''); // Clear input field
-        closeModal(); // Close modal after creation
+        setNewEventTitle('');
+        closeModal();
     };
 
     return (
@@ -53,6 +46,8 @@ export const Landing = () => {
             <header className='header'>
                 <h2 className='greeting'>Good afternoon, Sadie!</h2>
                 <div className='search-container'>
+                    {/* Image for the left of the search bar */}
+                    <img src='moodboard_logo.jpg' alt="Moodboard Logo" className="search-image" />
                     <div className='search-bar'>
                         <i className='fas fa-search'></i>
                         <input
@@ -76,7 +71,6 @@ export const Landing = () => {
                 ))}
             </div>
 
-            {/* Custom Modal */}
             {showModal && (
                 <div className='modal-overlay'>
                     <div className='modal'>

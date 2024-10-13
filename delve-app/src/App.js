@@ -1,4 +1,3 @@
-//import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -12,7 +11,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/'  element={<JournalEntry/>}/>
+          <Route path="/" element={<Landing />} />
+          <Route path="/journal/:title" element={<JournalEntry />} /> {/* Dynamic route */}
         </Routes>
       </Router>
     </>
