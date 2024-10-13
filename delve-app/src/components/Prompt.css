@@ -7,14 +7,13 @@
     flex-direction: column;
     width: 98%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #ccc;
+    background-color: #fff;
   }
   
   .prompt-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
     width: 100%;
   }
   
@@ -57,3 +56,17 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     font-size: 14px;
   }
+
+  .notepad-container {
+    width: 100%; /* Ensure notepad takes up the full width of the journal-content */
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+    margin-top: 20px; /* Add spacing between the date and notepad */
+    margin-bottom: 30px;
+}
