@@ -45,7 +45,7 @@
   
   .search-bar {
     position: relative;
-    width: 250px; /* Adjust width as needed */
+    width: 450px; /* Adjust width as needed */
   }
   
   .search-bar i {
@@ -72,6 +72,7 @@
     margin-left: 50px; /* Space between search bar and button */
     width: 40px;
     height: 40px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -37,7 +37,7 @@ html, body {
     width: 80%; 
     background-color: white;
     border-radius: 15px;
-    padding: 20px;
+    padding: 20px; /*Changed the padding to 20px*/
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
