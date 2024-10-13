@@ -1,0 +1,59 @@
+.prompt-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ccc;
+  }
+  
+  .prompt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+  }
+  
+  /* Dropdown toggle button (triangle arrow) */
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding-right: 10px;
+  }
+  
+  /* Prompt question text */
+  .prompt-question {
+    flex-grow: 1;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  /* Prompt icons (refresh and delete) */
+  .prompt-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Icon button styling */
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Dropdown content */
+  .prompt-dropdown {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+  }

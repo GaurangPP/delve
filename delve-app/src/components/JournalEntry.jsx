@@ -1,13 +1,36 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './JournalEntry.css';
+import { Prompt } from './Prompt';
 
 export const JournalEntry = () => {
+
+    const [prompts, setPrompts] = useState([
+        { id: 1, question: "What's your favorite color?" },
+        { id: 2, question: "What did you do today?" },
+        { id: 3, question: "What's your next goal?" },
+      ]);
+
+
   const [text, setText] = useState('');
   const textareaRef = useRef(null);
+
 
   const handleTextChange = (e) => {
     setText(e.target.value);
   };
+
+  const handleRefresh = (id) => {
+    setPrompts((prevPrompts) =>
+      prevPrompts.map((prompt) =>
+        prompt.id === id ? { ...prompt, question: 'New question' } : prompt
+      )
+    );
+  };
+
+  const handleDelete = (id) => {
+    setPrompts((prevPrompts) => prevPrompts.filter((prompt) => prompt.id !== id));
+  };
+
 
   // Adjust the height of the textarea dynamically based on the content
   useEffect(() => {
@@ -39,8 +62,17 @@ export const JournalEntry = () => {
         placeholder="Hey Sadie, what's on your mind?"
       />
     </div>
-    <button class="delve-button"></button>
+    {prompts.map((prompt) => (
+        <Prompt
+          key={prompt.id}
+          question={prompt.question}
+          onDelete={() => handleDelete(prompt.id)}  // Passing the delete handler
+          onRefresh={() => handleRefresh(prompt.id)} // Passing the refresh handler
+          prompts={[{ id: 1, question: "What's your favorite color?" },]}
+        />
+    ))}
   </div>
+  <button class="delve-button"></button>
 </div>
   );
 };

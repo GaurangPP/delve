@@ -46,6 +46,7 @@
     align-items: flex-start;
     overflow: visible;
     margin-top: 20px; /* Add spacing between the date and notepad */
+    margin-bottom: 30px;
 }
 
 /* Notepad textarea */
