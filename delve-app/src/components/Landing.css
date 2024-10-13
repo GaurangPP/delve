@@ -23,6 +23,7 @@
   .search-container {
     display: flex;
     align-items: center;
+    margin-bottom: 60px;
   }
   
   .search-bar {
@@ -83,4 +84,15 @@
   
   .event-name {
     color: #333;
+  }
+
+  .journal-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensures 4 cards per row */
+    grid-gap: 30px; /* Adds space between the cards */
+    justify-content: space-between;
+  }
+  
+  .journal-card {
+    margin: 0 20px; /* Adds horizontal space between individual cards */
   }

@@ -1,0 +1,64 @@
+.card {
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+    background-color: #e5e8e8;
+    border-radius: 50px; /* Increase this value to make the corners more rounded */
+    padding: 20px;
+    width: 310px;
+    height: 100px;
+    border: 2px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.2s ease;
+    overflow: hidden; /* Prevents overflow of content */
+  }
+
+  .separator {
+    width: 2px; /* Width of the vertical line */
+    height: 60px; /* Height of the line */
+    background-color: #ccc; /* Color of the line */
+  }
+  
+  
+  .card:hover {
+    transform: scale(1.05);
+    background-color: #d1d5d8;
+  }
+  
+  .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'FontAwesome', sans-serif;
+    color: #5f5f5f;
+    flex-grow: 1; /* Makes the date section grow to fill space */
+  }
+  
+  .month {
+    font-size: 20px;
+  }
+  
+  .day {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .title {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    word-wrap: break-word; /* Ensures long words break */
+    white-space: normal; /* Allows the text to wrap */
+    text-overflow: ellipsis; /* Optional, in case there's overflow */
+    font-size: calc(1.5vw + 1vh); /* Responsive font size */
+    margin-top: 10px;
+    flex-grow: 1; /* Makes sure it uses up available space */
+    padding: 0 15px; /* Horizontal padding for title */
+    align-items: center; /* Center vertically */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+  }
