@@ -1,64 +1,66 @@
 .card {
     display: flex;
     align-items: center;
-    
     justify-content: space-between;
-    background-color: #e5e8e8;
-    border-radius: 50px; /* Increase this value to make the corners more rounded */
+    background-color: #E3F6FF; /* Light blue background */
+    border-radius: 50px; /* Rounded corners */
     padding: 20px;
-    width: 310px;
+    width: 300px;
     height: 100px;
-    border: 2px solid #ccc;
+    border: 2px solid #E3F6FF;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     text-align: left;
     transition: transform 0.2s ease;
     overflow: hidden; /* Prevents overflow of content */
-  }
+}
 
-  .separator {
+.separator {
     width: 2px; /* Width of the vertical line */
-    height: 60px; /* Height of the line */
-    background-color: #ccc; /* Color of the line */
-  }
-  
-  
-  .card:hover {
+    height: 70px; /* Height of the line */
+    background-color: #c6d0dd; /* Color of the line */
+}
+
+.card:hover {
     transform: scale(1.05);
-    background-color: #d1d5d8;
-  }
-  
-  .date {
+    background-color: #b2d6f0; /* Change background on hover */
+    border: 2px solid #b2d6f0;
+}
+
+/* Updated Date Section */
+.date {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'FontAwesome', sans-serif;
-    color: #5f5f5f;
+    color: black; /* Changed date color to black */
     flex-grow: 1; /* Makes the date section grow to fill space */
-  }
-  
-  .month {
+}
+
+.month {
     font-size: 20px;
-  }
-  
-  .day {
-    font-size: 40px;
+    color: #5F6368; /* Ensure month text is black */
+}
+
+.day {
+    font-size: 30px;
     font-weight: bold;
-  }
-  
-  .title {
-    font-family: 'Arial', sans-serif;
+    color: #5F6368; /* Ensure day text is black */
+}
+
+.title {
+    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: #000;
+    color: #5F6368;
     word-wrap: break-word; /* Ensures long words break */
     white-space: normal; /* Allows the text to wrap */
-    text-overflow: ellipsis; /* Optional, in case there's overflow */
+    text-overflow: ellipsis; /* Optional: Handle overflow */
     font-size: calc(1.5vw + 1vh); /* Responsive font size */
     margin-top: 10px;
-    flex-grow: 1; /* Makes sure it uses up available space */
+    flex-grow: 1; /* Ensures the title fills space */
     padding: 0 15px; /* Horizontal padding for title */
     align-items: center; /* Center vertically */
     display: flex; /* Enable flexbox */
     justify-content: center; /* Center horizontally */
-  }
+}
