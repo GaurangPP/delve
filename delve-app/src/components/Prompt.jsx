@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid'; // Use uuid for unique IDs
 
 export const Prompt = ({ id, question, onDelete, onRefresh, updatePrompt, onTextChange }) => {
   const [subPrompts, setSubPrompts] = useState([]); // State to hold nested prompts
-  const [isDropdownOpen, setIsDropdownOpen] = useState(true); // Keep dropdown open initially
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Keep dropdown open initially
   
 
   const [text, setText] = useState('');
