@@ -1,28 +1,29 @@
-/* Ensure the whole page uses consistent layout */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Quicksand', sans-serif;
-    background-color: #f5f5f5;
-}
-
 /* Main journal container */
 .journal-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Keep the entire content centered */
     padding: 20px;
     height: 100vh;
     box-sizing: border-box;
 }
 
+/* Add a wrapper to group title, date, and notepad */
+.journal-content {
+    width: 80%; /* Set this width to match the notepad */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left of the content */
+}
+
 /* Title styling */
 .journal-title {
-    font-size: 48px;
+    font-size: 40px;
     margin: 10px 0;
     color: #3a2f2f;
     font-family: 'Poppins', sans-serif;
+    text-align: left; /* Align title text to the left within the container */
 }
 
 /* Date styling */
@@ -30,40 +31,38 @@ html, body {
     font-size: 18px;
     margin-bottom: 20px;
     color: #666;
+    text-align: left; /* Align date text to the left within the container */
 }
 
 /* Notepad container */
 .notepad-container {
-    width: 80%; 
+    width: 100%; /* Ensure notepad takes up the full width of the journal-content */
     background-color: white;
     border-radius: 15px;
-    padding: 20px; /*Changed the padding to 20px*/
+    padding: 15px 0px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     overflow: visible;
+    margin-top: 20px; /* Add spacing between the date and notepad */
 }
 
 /* Notepad textarea */
 .notepad-textarea {
     width: 100%;
-    min-height: 50vh; /* Set initial height to 50% of the viewport */
+    min-height: 50vh;
     border: none;
     outline: none;
     padding: 0 20px;
     margin: 0;
-    font-family: 'Quicksand', sans-serif; /* Use the Quicksand font */
+    font-family: 'Quicksand', sans-serif;
     font-size: 24px;
-    line-height: 38px; /* Align text with lines */
+    line-height: 38px;
     resize: none;
     overflow: hidden;
     background-color: transparent;
     box-sizing: border-box;
-}
-
-/* Add horizontal lines using background gradient */
-.notepad-textarea {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-size: 100% 38px;
 }
@@ -72,4 +71,25 @@ html, body {
 .notepad-textarea::placeholder {
     color: rgba(0, 0, 0, 0.5);
     font-style: italic;
+}
+
+.delve-button {
+    position: fixed;  /* Keeps the button fixed in the bottom-right corner */
+    bottom: 20px;
+    right: 20px;
+    width: 80px;      /* Set the width of the button */
+    height: 80px;     /* Set the height of the button (same as width to make it round) */
+    border-radius: 50%;  /* Makes the button round */
+    border: none;     /* Remove the default border */
+    background-image: url('/public/delve_logo.jpeg');  /* Set the image as the button */
+    background-size: cover;  /* Ensure the image covers the entire button */
+    background-position: center;  /* Center the image inside the button */
+    cursor: pointer;  /* Change cursor to pointer on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow for effect */
+    outline: none;    /* Remove the outline */
+}
+
+.delve-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
