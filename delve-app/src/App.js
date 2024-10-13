@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<JournalEntry />} />
           <Route path="/journal/:title" element={<JournalEntry />} /> {/* Dynamic route */}
         </Routes>
       </Router>
