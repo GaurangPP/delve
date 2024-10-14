@@ -3,6 +3,8 @@ Dubhacks 2024 Project - Wellness (Angelfin) Track
 
 Video Submission Link: https://youtu.be/Qn5p2RfBl-U
 
+To use Delve, clone and run using npm install and npm start. You will also need a perplexity API key that you can set in the .env file.
+
 **Inspiration**
 
 We were inspired to create Delve because of our own experiences journaling. We've all gone through the ups and downs of navigating life's challenges, and journaling has played a critical role in helping us work through them. However, when we recommended journaling to our friends, many of them expressed difficulty creating insightful journal entries. This made the journaling experience less rewarding for them, making it difficult for them to find motivation to write. We created Delve to help kickstart their journaling habit by providing personalized prompts based on their own writing and presenting statistical insights into their mood.
